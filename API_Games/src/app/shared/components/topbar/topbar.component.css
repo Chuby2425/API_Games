@@ -1,0 +1,13 @@
+/* Código CSS del topbar */
+.navbar {
+  background-color: #1c313a;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+  color: #fff;
+}
+
+.navbar-nav li a:hover {
+  color: #18bc9c;
+}

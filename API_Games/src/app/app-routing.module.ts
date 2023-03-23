@@ -7,7 +7,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'action',
     pathMatch: 'full'
   },
 {
@@ -18,8 +18,8 @@ const routes: Routes = [
 {
   path: 'strategy',
   loadChildren: () => import('./strategy/strategy.module').then(m => m.StrategyModule)
-},
-{
+}
+/*{
   path: 'rpg',
   loadChildren: () => import('./rpg/rpg.module').then(m => m.RpgModule)
 },
@@ -42,7 +42,7 @@ const routes: Routes = [
 {
   path: 'sports',
   loadChildren: () => import('./sports/sports.module').then(m => m.SportsModule)
-},
+},*/
 ];
 
 @NgModule({
