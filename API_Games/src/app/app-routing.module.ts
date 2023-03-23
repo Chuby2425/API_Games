@@ -2,28 +2,28 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-
   /* Esto es lazy louding */
 
   {
     path: '',
-    redirectTo: 'action',
-    pathMatch: 'full'
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
-{
-  path: 'action',
-  loadChildren: () => import('./action/action.module').then(m => m.ActionModule)
-},
 
-{
-  path: 'strategy',
-  loadChildren: () => import('./strategy/strategy.module').then(m => m.StrategyModule)
-}
-/*{
-  path: 'rpg',
-  loadChildren: () => import('./rpg/rpg.module').then(m => m.RpgModule)
-},
-{
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'action',
+    loadChildren: () => import('./action/action.module').then((m) => m.ActionModule),
+  },
+
+  {
+    path: 'strategy',
+    loadChildren: () => import('./strategy/strategy.module').then((m) => m.StrategyModule),
+  },
+  /*{
   path: 'shooter',
   loadChildren: () => import('./shooter/shooter.module').then(m => m.ShooterModule)
 },
@@ -47,6 +47,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

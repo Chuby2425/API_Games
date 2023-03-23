@@ -2,11 +2,11 @@ import { Component , OnInit  } from '@angular/core';
 import { GamesService } from 'src/app/shared/services/games/games.service';
 
 @Component({
-  selector: 'app-action-page',
-  templateUrl: './action-page.component.html',
-  styleUrls: ['./action-page.component.css']
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
 })
-export class ActionPageComponent implements OnInit {
+export class HomePageComponent implements OnInit {
 
   constructor(private gamesService: GamesService){ }
 
