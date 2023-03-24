@@ -35,3 +35,16 @@
 .sidebar-heading {
   color: #a9a9a9;
 }
+
+.dropdown-menu {
+  background-color: #333;
+  border: none;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #444;
+}

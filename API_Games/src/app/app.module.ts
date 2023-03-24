@@ -16,7 +16,7 @@ import { ActionModule } from './action/action.module';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    ActionModule
+    ActionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
