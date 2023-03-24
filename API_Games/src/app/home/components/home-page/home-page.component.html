@@ -1,34 +1,16 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-4">
+      <div class="row d-flex">
+        <div class="col-md-4" *ngFor="let game of games">
           <div class="card mt-4">
-            <img src="https://via.placeholder.com/300" class="card-img" alt="Imagen de ejemplo">
+            <img src='{{ game.background_image }}' class="card-img" alt="image">
             <div class="card-body">
-              <h5 class="card-title">Título de la tarjeta</h5>
-              <p class="card-text">Descripción de la tarjeta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor sed urna tristique cursus. Fusce facilisis consectetur aliquet. Fusce eu volutpat sapien. Donec id dignissim ipsum, sit amet volutpat mi.</p>
-              <button class="btn btn-primary btn-marino">Botón de color azul marino</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mt-4">
-            <img src="https://via.placeholder.com/300" class="card-img" alt="Imagen de ejemplo">
-            <div class="card-body">
-              <h5 class="card-title">Título de la tarjeta</h5>
-              <p class="card-text">Descripción de la tarjeta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor sed urna tristique cursus. Fusce facilisis consectetur aliquet. Fusce eu volutpat sapien. Donec id dignissim ipsum, sit amet volutpat mi.</p>
-              <button class="btn btn-primary btn-marino">Botón de color azul marino</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mt-4">
-            <img src="https://via.placeholder.com/300" class="card-img" alt="Imagen de ejemplo">
-            <div class="card-body">
-              <h5 class="card-title">Título de la tarjeta</h5>
-              <p class="card-text">Descripción de la tarjeta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor sed urna tristique cursus. Fusce facilisis consectetur aliquet. Fusce eu volutpat sapien. Donec id dignissim ipsum, sit amet volutpat mi.</p>
-              <button class="btn btn-primary btn-marino">Botón de color azul marino</button>
+              <h5 class="card-title"> {{ game.name }} </h5>
+              <p class="card-text"> <strong> Rating in Metacritic: </strong> {{ game.metacritic }} </p>
+              <p class="card-text"> <strong> Released: </strong> {{ game.released }} </p>
+              <p class="card-text"> <strong> Description: </strong> {{ game.description }} </p>
+              <button class="btn btn-primary btn-marino"> Details </button>
             </div>
           </div>
         </div>
@@ -36,3 +18,10 @@
     </div>
   </div>
 </div>
+<div class="btn-page" role="group" aria-label="First group">
+  <button type="button" class="btn btn-dark"> 1 </button>
+  <button type="button" class="btn btn-dark"> 2 </button>
+  <button type="button" class="btn btn-dark"> 3 </button>
+  <button type="button" class="btn btn-dark"> 4 </button>
+</div>
+
