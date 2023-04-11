@@ -1,5 +1,5 @@
 import { Component , OnInit  } from '@angular/core';
-import { GamesService } from 'src/app/shared/services/games/games.service';
+import { GenresService } from 'src/app/shared/services/genres/genres.service';
 
 @Component({
   selector: 'app-action-page',
@@ -8,15 +8,15 @@ import { GamesService } from 'src/app/shared/services/games/games.service';
 })
 export class ActionPageComponent implements OnInit {
 
-  constructor(private gamesService: GamesService){ }
+  constructor(private genresService: GenresService){ }
 
-  games: any;
+  genres: any;
 
   ngOnInit(): void{
-    this.gamesService.getGames()
+    this.genresService.getGenres()
       .subscribe(
         (data: any) => {
-          this.games = data.results;
+          this.genres = data.results;
           //this.moviesCategory = data.name;
         }
       );
