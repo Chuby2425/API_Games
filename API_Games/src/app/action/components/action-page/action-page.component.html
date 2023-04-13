@@ -1,10 +1,12 @@
 <div class="aria-label">
   <h1>
-    Action list
+    action list
   </h1>
 
   <hr style="color: #1c313a;" size="5" />
 </div>
+
+
 
 <div class="container-fluid">
   <div class="row">
@@ -15,8 +17,6 @@
             <img src='{{ genre.background_image }}' class="card-img" alt="image">
             <div class="card-body">
               <h5 class="card-title"> {{ genre.name }} </h5>
-              <p class="card-text"> <strong> Rating in Metacritic: </strong> {{ genre.metacritic }} </p>
-              <p class="card-text"> <strong> Released: </strong> {{ genre.released }} </p>
               <button class="btn btn-primary btn-marino"> Details </button>
             </div>
           </div>
@@ -25,6 +25,7 @@
     </div>
   </div>
 </div>
+
 
 <div class="btn-page" role="group" aria-label="First group">
   <button type="button" class="btn btn-dark"> 1 </button>

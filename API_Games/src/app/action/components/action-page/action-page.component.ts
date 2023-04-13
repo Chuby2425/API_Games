@@ -1,6 +1,13 @@
 import { Component , OnInit  } from '@angular/core';
 import { GenresService } from 'src/app/shared/services/genres/genres.service';
 
+
+
+interface ApiResponse {
+  results: any[];
+}
+
+
 @Component({
   selector: 'app-action-page',
   templateUrl: './action-page.component.html',
@@ -8,20 +15,15 @@ import { GenresService } from 'src/app/shared/services/genres/genres.service';
 })
 export class ActionPageComponent implements OnInit {
 
-  constructor(private genresservice: GenresService){ }
 
-  genres: any;
-  games: any
+  genres: any[] = [];
 
-  ngOnInit(): void{
-    this.genresservice.getGenres()
-      .subscribe(
-        (data: any) => {
-          this.genres = data.results;
-          //this.moviesCategory = data.name;
-        }
-      );
-  }
+  constructor(private genresService: GenresService){ }
 
+  ngOnInit(): void {
+    this.genresService.getGenres()
+    .subscribe((data: ApiResponse) => {
+      this.genres = data.results; });
+      }
+    }
 
-}
