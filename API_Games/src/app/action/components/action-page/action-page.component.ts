@@ -8,12 +8,13 @@ import { GenresService } from 'src/app/shared/services/genres/genres.service';
 })
 export class ActionPageComponent implements OnInit {
 
-  constructor(private genresService: GenresService){ }
+  constructor(private genresservice: GenresService){ }
 
   genres: any;
+  games: any
 
   ngOnInit(): void{
-    this.genresService.getGenres()
+    this.genresservice.getGenres()
       .subscribe(
         (data: any) => {
           this.genres = data.results;
@@ -21,4 +22,6 @@ export class ActionPageComponent implements OnInit {
         }
       );
   }
+
+
 }

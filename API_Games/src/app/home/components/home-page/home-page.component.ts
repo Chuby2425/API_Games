@@ -12,6 +12,7 @@ export class HomePageComponent implements OnInit {
 
   games: any;
 
+
   ngOnInit(): void{
     this.gamesService.getGames()
       .subscribe(

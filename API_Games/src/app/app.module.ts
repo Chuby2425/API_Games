@@ -9,14 +9,16 @@ import { ActionModule } from './action/action.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    ActionModule,
+    ActionModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
