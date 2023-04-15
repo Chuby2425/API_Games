@@ -12,14 +12,23 @@ export class HomePageComponent implements OnInit {
 
   games: any;
 
-
+  //obtener juegos
   ngOnInit(): void{
     this.gamesService.getGames()
       .subscribe(
         (data: any) => {
           this.games = data.results;
-          //this.moviesCategory = data.name;
         }
       );
+  }
+
+  //pasar de página
+  loadGamePage(gamePage: number){
+    this.gamesService.getGamePage(gamePage)
+    .subscribe(
+      (data: any) => {
+        this.games = data.results;
+      }
+    )
   }
 }

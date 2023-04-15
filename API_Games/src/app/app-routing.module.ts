@@ -15,19 +15,18 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'genres',
+    loadChildren: () => import('./genres/genres.module').then(m => m.GenresModule)
+  },
+  {
     path: 'action',
     loadChildren: () => import('./action/action.module').then((m) => m.ActionModule),
   },
-
   {
     path: 'strategy',
     loadChildren: () => import('./strategy/strategy.module').then((m) => m.StrategyModule),
   },
-  /*{
-  path: 'shooter',
-  loadChildren: () => import('./shooter/shooter.module').then(m => m.ShooterModule)
-},
-{
+/*{
   path: 'adventure',
   loadChildren: () => import('./adventure/adventure.module').then(m => m.AdventureModule)
 },

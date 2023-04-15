@@ -1,31 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-
-interface ApiResponse {
-  results: any[];
-}
-
-interface GameApiResponse {
-  results: any[];
-}
+import { map } from 'rxjs/operators';
+import { Game } from 'src/app/Interfaces/game'
+import { Genre } from 'src/app/Interfaces/game'
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class GenresService {
+  constructor(private http: HttpClient) {}
+  apiKey: string = 'd4e382cfc6414bc8ae6ab2afc166b36d';
+  apiUrl: string = 'https://api.rawg.io/api/';
 
-  private gamesUrl = 'https://api.rawg.io/api/games?key=d4e382cfc6414bc8ae6ab2afc166b36d';
-
-  constructor(private http: HttpClient) { }
-
-  getGenres(): Observable<ApiResponse>{
-    return this.http.get<ApiResponse>('https://api.rawg.io/api/genres?key=d4e382cfc6414bc8ae6ab2afc166b36d');
+  getGenre(): Observable<Genre[]> {
+    return this.http
+      .get<Genre[]>(`${this.apiUrl}genres?&key=${this.apiKey}`)
+      .pipe(
+        map((response: any) => {
+          return response.results;
+        })
+      );
   }
-
-  getGames(id: number) {
-    const url = `${this.gamesUrl}?genres=${id}`;
-    return this.http.get<GameApiResponse>(url);
+  getGamesByGenre(genre: string): Observable<Game[]> {
+    return this.http
+      .get<Game[]>(`${this.apiUrl}games?&genres=${genre}&key=${this.apiKey}`)
+      .pipe(
+        map((response: any) => {
+          return response.results;
+        })
+      );
   }
 }
