@@ -7,7 +7,7 @@ import { Genre } from 'src/app/Interfaces/game'
   templateUrl: './genre-page.component.html',
   styleUrls: ['./genre-page.component.css']
 })
-export class GenresPageComponent implements OnInit {
+export class GenrePageComponent implements OnInit {
 
   constructor(private genresService: GenresService) { }
 

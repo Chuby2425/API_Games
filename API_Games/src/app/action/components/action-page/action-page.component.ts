@@ -1,5 +1,6 @@
 import { Component , OnInit  } from '@angular/core';
 import { GenresService } from 'src/app/shared/services/genres/genres.service';
+import { GamesService } from 'src/app/shared/services/games/games.service';
 import { Game } from 'src/app/Interfaces/game'
 
 
@@ -12,10 +13,10 @@ export class ActionPageComponent implements OnInit {
 
   games: Game[] = [];
 
-  constructor(private genreService: GenresService) {}
+  constructor(private genreService: GenresService, private gamesService: GamesService) {}
 
   ngOnInit(): void {
-    this.genreService.getGamesByGenre('action').subscribe({
+    this.genreService.getGamesByGenre('').subscribe({
       next: (games) => {
         this.games = games;
       },
@@ -23,6 +24,15 @@ export class ActionPageComponent implements OnInit {
         this.games = [];
       },
     });
+  }
+
+  loadGamePage(gamePage: number){
+    this.gamesService.getGamePage(gamePage)
+    .subscribe(
+      (data: any) => {
+        this.games = data.results;
+      }
+    )
   }
 }
 

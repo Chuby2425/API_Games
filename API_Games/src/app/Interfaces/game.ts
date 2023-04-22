@@ -1,3 +1,27 @@
+export interface Platform{
+}
+
+export interface Store{
+}
+
+export interface Rating{
+}
+
+export interface AddedByStatus{
+}
+
+export interface Tag{
+}
+
+export interface EsrbRating{
+}
+
+export interface Color{
+}
+
+export interface ShortScreenshot{
+}
+
 export interface Game {
   slug: string;
   name: string;
