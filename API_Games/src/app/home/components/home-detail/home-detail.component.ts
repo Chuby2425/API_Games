@@ -9,10 +9,8 @@ import { GamesService } from 'src/app/shared/services/games/games.service';
 })
 //Con esto lo que se hace es:  llamar los detalles de los juegos home detail
 export class HomeDetailComponent implements OnInit {
-  constructor(
-    private route: ActivatedRoute,
-    private gamesService: GamesService
-  ) {}
+
+  constructor(private route: ActivatedRoute, private gamesService: GamesService) {}
 
   gameid!: number;
   gameDetail: any;
@@ -21,7 +19,6 @@ export class HomeDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.gameid = params['id'];
-
       console.log(this.gameid);
       this.loadGameDetail(this.gameid);
     });

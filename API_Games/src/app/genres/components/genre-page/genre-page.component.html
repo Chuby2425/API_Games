@@ -1,6 +1,6 @@
 <div class="aria-label">
   <h1>
-    All Genres
+    Genres
   </h1>
 
   <hr style="color: #1c313a;" size="5" />
@@ -16,7 +16,7 @@
             <div class="card-body">
               <h5 class="card-title"> {{ genre.name }}</h5>
               <p class="card-text"> <strong> {{ genre.name }} games: </strong> {{ genre.games_count }} </p>
-              <a [routerLink]="['/genres/', genre.id]" class="btn btn-primary btn-marino"> View games </a>
+              <a [routerLink]="['/genres/', genre.id]" class="btn btn-primary btn-marino"> Games </a>
             </div>
           </div>
         </div>

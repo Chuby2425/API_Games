@@ -45,7 +45,7 @@ export class GamesService {
     return this.http.get('https://api.rawg.io/api/games?key=d4e382cfc6414bc8ae6ab2afc166b36d&page=' + page);
   }
 
-
+  //llamar para obtener los detalles de los juegos
   getGamesDetail(gameid: number){
     return this.http.get('https://api.rawg.io/api/games/'+ gameid +'?key=d4e382cfc6414bc8ae6ab2afc166b36d');
   }

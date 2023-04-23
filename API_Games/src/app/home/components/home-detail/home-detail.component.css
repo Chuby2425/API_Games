@@ -1,0 +1,27 @@
+#background_image{
+  margin-top: 60px;
+}
+
+a{
+  color: black;
+  text-decoration:none;
+}
+
+p {
+  text-align: justify;
+}
+
+.platforms-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.platform {
+  margin-right: 10px;
+}
+
+.platform.last {
+  margin-right: 0;
+}
+

@@ -1,1 +1,38 @@
-<p>home-detail works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <img src='{{ gameDetail.background_image}}' alt="game poster" class="img-fluid" id="background_image">
+      <hr>
+      <img src='{{ gameDetail.background_image_additional}}' alt="screenshot game" class="img-fluid"
+        id="background_image_additional">
+    </div>
+    <div class="col-md-8">
+      <h1>
+        <a href="{{ gameDetail.website }}" class="mb-3">{{ gameDetail.name }} </a>
+      </h1>
+      <hr style="color: #1c313a;" size="5" />
+      <p class="lead">{{ gameDetail.tagline }}</p>
+      <p class="lead">{{ gameDetail.overview }}</p>
+      <ul class="list-group mb-3">
+        <li class="list-group-item">
+          <strong>Genres:</strong>
+          <span *ngFor="let genre of gameDetail.genres; let last = last">
+            {{ genre.name }}{{last ? '' : ', '}}
+          </span>
+        </li>
+        <li class="list-group-item"> <strong>Released:</strong> {{gameDetail.released}} </li>
+        <li class="list-group-item"> <strong>Metacritic rating:</strong> {{ gameDetail.metacritic }}</li>
+        <li class="list-group-item"> <strong>Achievements count:</strong> {{ gameDetail.achievements_count }}</li>
+        <li class="list-group-item">
+          <strong>Platforms:</strong>
+          <span *ngFor="let platform of gameDetail.platforms; let last = last">
+            {{platform.platform.name}}{{last ? '' : ', '}}
+          </span>
+        </li>
+      </ul>
+      <p class="lead"> {{ gameDetail.description_raw }} </p>
+    </div>
+  </div>
+</div>
+
+

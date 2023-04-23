@@ -11,6 +11,12 @@ export interface AddedByStatus{
 }
 
 export interface Tag{
+  id: number;
+  name: string;
+  slug: string;
+  lenguage: string;
+  games_count: number;
+  image_background: string;
 }
 
 export interface EsrbRating{
