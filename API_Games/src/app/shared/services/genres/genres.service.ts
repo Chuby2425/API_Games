@@ -32,4 +32,14 @@ export class GenresService {
         })
       );
   }
+
+
+  //llamar generos
+  getGenres(genreid: number){
+    return this.http.get('https://api.rawg.io/api/genres/'+ genreid +'?key=d4e382cfc6414bc8ae6ab2afc166b36d');
+  }
+
+
 }
+
+

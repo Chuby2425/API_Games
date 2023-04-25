@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { GenresRoutingModule } from './genres-routing.module';
 import { GenrePageComponent } from './components/genre-page/genre-page.component';
+import { GenresDetailComponent } from './components/genres-detail/genres-detail.component';
 
 
 @NgModule({
   declarations: [
-    GenrePageComponent
+    GenrePageComponent,
+    GenresDetailComponent
   ],
   imports: [
     CommonModule,
