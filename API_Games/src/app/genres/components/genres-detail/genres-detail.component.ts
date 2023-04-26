@@ -12,13 +12,13 @@ import { Game } from 'src/app/Interfaces/game';
 })
 export class GenresDetailComponent implements OnInit {
 
-   constructor(private route: ActivatedRoute, private genresService: GenresService, private gamesService: GamesService) {}
+    constructor(private route: ActivatedRoute, private genresService: GenresService, private gamesService: GamesService) {}
 
-   genreid!: number;
-   genredetail: any;
-   games: Game[] = [];
+    genreid!: number;
+    genredetail: any;
+    games: Game[] = [];
 
-   ngOnInit(): void {
+    ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.genreid = params['id'];
       this.loadGenreDetail(this.genreid);
