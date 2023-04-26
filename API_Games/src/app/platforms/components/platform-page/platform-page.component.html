@@ -1,0 +1,25 @@
+<div class="aria-label">
+  <h1>
+    Platforms
+  </h1>
+
+  <hr style="color: #1c313a;" size="5" />
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row d-flex">
+        <div class="col-md-4" *ngFor="let platform of platforms">
+          <div class="card mt-4">
+            <img src='{{ platform.image_background }}' class="card-img" alt="image">
+            <div class="card-body">
+              <h5 class="card-title"> {{ platform.name }}</h5>
+              <p class="card-text" > <strong> Games count: </strong> {{ platform.games_count }} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

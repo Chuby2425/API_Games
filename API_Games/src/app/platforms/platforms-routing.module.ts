@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StrategyPageComponent } from './components/strategy-page/strategy-page.component';
-
+import { PlatformPageComponent } from './components/platform-page/platform-page.component';
 
 const routes: Routes = [
-  { path: '', component: StrategyPageComponent },];
+  { path: '', component: PlatformPageComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class StrategyRoutingModule { }
+export class PlatformsRoutingModule { }

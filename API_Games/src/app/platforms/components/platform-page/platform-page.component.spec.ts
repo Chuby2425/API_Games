@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StrategyPageComponent } from './strategy-page.component';
+import { PlatformPageComponent } from './platform-page.component';
 
-describe('StrategyPageComponent', () => {
-  let component: StrategyPageComponent;
-  let fixture: ComponentFixture<StrategyPageComponent>;
+describe('PlatformPageComponent', () => {
+  let component: PlatformPageComponent;
+  let fixture: ComponentFixture<PlatformPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StrategyPageComponent ]
+      declarations: [ PlatformPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StrategyPageComponent);
+    fixture = TestBed.createComponent(PlatformPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

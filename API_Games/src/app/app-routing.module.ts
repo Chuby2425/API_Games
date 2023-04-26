@@ -19,29 +19,9 @@ const routes: Routes = [
     loadChildren: () => import('./genres/genres.module').then(m => m.GenresModule)
   },
   {
-    path: 'action',
-    loadChildren: () => import('./action/action.module').then((m) => m.ActionModule),
+    path: 'platforms',
+    loadChildren: () => import('./platforms/platforms.module').then(m => m.PlatformsModule)
   },
-  {
-    path: 'strategy',
-    loadChildren: () => import('./strategy/strategy.module').then((m) => m.StrategyModule),
-  },
-/*{
-  path: 'adventure',
-  loadChildren: () => import('./adventure/adventure.module').then(m => m.AdventureModule)
-},
-{
-  path: 'puzzle',
-  loadChildren: () => import('./puzzle/puzzle.module').then(m => m.PuzzleModule)
-},
-{
-  path: 'racing',
-  loadChildren: () => import('./racing/racing.module').then(m => m.RacingModule)
-},
-{
-  path: 'sports',
-  loadChildren: () => import('./sports/sports.module').then(m => m.SportsModule)
-},*/
 ];
 
 @NgModule({

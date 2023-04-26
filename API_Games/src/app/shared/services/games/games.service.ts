@@ -25,9 +25,9 @@ export class GamesService {
       );
   }
 
-  getGamesByGenre(genre: string): Observable<Game[]> {
+  getGamesByGenre(genre: number): Observable<Game[]> {
     return this.http
-      .get<Game[]>(`${this.apiUrl}games?&genres=${genre}&key=${this.apiKey}`)
+      .get<Game[]>(`${this.apiUrl}games?genres=${genre}&key=${this.apiKey}`)
       .pipe(
         map((response: any) => {
           return response.results;
