@@ -25,7 +25,7 @@ export class PlatformsService {
         })
       );
   }
-  getGamesByPlatform(platform: string): Observable<Game[]> {
+  getGamesByPlatform(platform: number): Observable<Game[]> {
     return this.http
       .get<Game[]>(`${this.apiUrl}games?&platforms=${platform}&key=${this.apiKey}`)
       .pipe(

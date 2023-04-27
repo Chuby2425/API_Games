@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PlatformsService } from 'src/app/shared/services/platforms/platforms.service';
+import { Game } from 'src/app/Interfaces/game';
 
 @Component({
   selector: 'app-platforms-detail',
@@ -16,12 +17,14 @@ export class PlatformDetailComponent implements OnInit {
 
   platformid!:number;
   platformdetail: any;
+  games: Game[] = [];
 
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.platformid = params['id'];
       this.loadPlatformDetail(this.platformid);
+      this.loadGamesByPlatform(this.platformid);
     });
   }
 
@@ -34,6 +37,13 @@ export class PlatformDetailComponent implements OnInit {
       console.log(this.platformdetail);
     }
     );
+  }
+
+  loadGamesByPlatform(platform: number) {
+    this.platformService.getGamesByPlatform(platform)
+    .subscribe((data: Game[]) => {
+      this.games = data;
+    });
   }
 
 }

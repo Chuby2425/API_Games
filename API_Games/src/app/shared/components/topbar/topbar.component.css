@@ -11,3 +11,11 @@
 .navbar-nav li a:hover {
   color: #18bc9c;
 }
+
+.navbar-brand{
+  margin-left: 17px;
+}
+
+.nav-link{
+  margin-right: 17px;
+}
