@@ -36,13 +36,13 @@ export class PlatformsService {
   }
 
 
-  //llamar generos
+  //obtiene el id de las plataformas
   getPlatform(platformid: number){
     return this.http.get('https://api.rawg.io/api/platforms/'+ platformid +'?key=d4e382cfc6414bc8ae6ab2afc166b36d');
   }
 
 
-// de parte del bycho (No sirve de nada )
+// llama las plataformas del API
   getPlatforms(){
     return this.http.get('https://api.rawg.io/api/platforms?key=d4e382cfc6414bc8ae6ab2afc166b36d');
   }

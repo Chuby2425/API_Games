@@ -22,6 +22,11 @@ const routes: Routes = [
     path: 'platforms',
     loadChildren: () => import('./platforms/platforms.module').then(m => m.PlatformsModule)
   },
+
+  {
+    path: 'creator',
+    loadChildren: () => import('./creator/creator.module').then((m) => m.CreatorModule),
+  },
 ];
 
 @NgModule({

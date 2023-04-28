@@ -29,7 +29,7 @@ export class PlatformDetailComponent implements OnInit {
   }
 
 
-  // acuerdese del get hay que cambiarlo
+  // con esto carga el plataform
   loadPlatformDetail(platformid: number) {
     this.platformService.getPlatform(platformid)
     .subscribe((data: any) => {
@@ -38,7 +38,7 @@ export class PlatformDetailComponent implements OnInit {
     }
     );
   }
-
+  //con esto se manda a llamar juegos por plataforma
   loadGamesByPlatform(platform: number) {
     this.platformService.getGamesByPlatform(platform)
     .subscribe((data: Game[]) => {

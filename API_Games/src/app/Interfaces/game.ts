@@ -3,6 +3,11 @@ export interface Platform{
   name: string;
 }
 
+export interface Creator{
+  id: number;
+  name: string;
+  image: string;
+}
 export interface Store{
 }
 
@@ -61,6 +66,7 @@ export interface Game {
   short_screenshots: ShortScreenshot[];
   parent_platforms: Platform[];
   genres: Genre[];
+  creators: Creator[];
 }
 
 export interface Result {
@@ -85,11 +91,12 @@ export interface GameElement {
   name: string;
   added: number;
 }
-
+// con esto es par mapear el creador
 export interface GamesByGenre {
   count: number;
   next: string;
   previous: null;
   results: Result[];
   user_platforms: boolean;
+
 }
