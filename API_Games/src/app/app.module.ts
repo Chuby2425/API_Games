@@ -9,10 +9,14 @@ import { SharedModule } from './shared/shared.module';
 import { GenrePageComponent } from './genres/components/genre-page/genre-page.component';
 import { Game } from 'src/app/Interfaces/game';
 import { PlatformPageComponent } from './platforms/components/platform-page/platform-page.component';
+import { ContactComponent } from './contact/components/contact/contact.component';
+import { InfoComponent } from './info/components/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ContactComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

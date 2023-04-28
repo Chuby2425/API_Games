@@ -1,0 +1,21 @@
+.max-width-600 {
+  max-width: 600px;
+}
+
+.btn-marino {
+  background-color: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.btn-marino:hover {
+  background-color: #0a0a16;
+  border-color: #0a0a16;
+}
+
+.card-body{
+  width: 700px;
+}
+
+.form-control{
+  width: 560px;
+}
