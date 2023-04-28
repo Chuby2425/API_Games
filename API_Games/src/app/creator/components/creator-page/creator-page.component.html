@@ -15,8 +15,7 @@
             <img src='{{ creator.image }}' class="card-img" alt="image">
             <div class="card-body">
               <h5 class="card-title"> {{ creator.name }}</h5>
-              <p class="card-text" > <strong> Games count: </strong> {{ creator.games_count }} </p>
-              <button [routerLink]="['/creator/',creator.id]" class="btn btn-primary btn-marino"> Games </button>
+              <p class="card-text" > <strong> Games Created: </strong> {{ creator.games_count }} </p>
             </div>
           </div>
         </div>
